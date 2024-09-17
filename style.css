@@ -1,0 +1,99 @@
+/* style.css */
+
+/* Styles généraux */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* Couleur de fond de la page */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden; /* Cacher le défilement */
+}
+
+/* Conteneur pour le texte et le bouton en haut */
+.top-container {
+    text-align: center;
+    width: 100%;
+    padding: 20px 0;
+    background-color: #fff;
+    position: fixed; /* Fixer en haut de la page */
+    top: 0;
+    left: 0;
+    z-index: 10; /* Assurer que le bouton est au-dessus de la vidéo */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Légère ombre */
+}
+
+/* Style du texte */
+h1 {
+    font-size: 2rem; /* Taille du texte */
+    margin-bottom: 10px; /* Espace entre le texte et le bouton */
+    color: rgb(150, 50, 60); /* Couleur du texte */
+}
+
+/* Styles pour le bouton */
+.btn-class-name {
+    --primary: 255, 90, 120;
+    --secondary: 150, 50, 60;
+    width: 100px; /* Largeur du bouton */
+    height: 100px; /* Hauteur du bouton */
+    border: none;
+    outline: none;
+    cursor: pointer;
+    user-select: none;
+    touch-action: manipulation;
+    background: linear-gradient(135deg, rgba(var(--primary), 1), rgba(var(--secondary), 1));
+    border-radius: 50%; /* Rendre le bouton circulaire */
+    position: relative;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    margin-top: 10px; /* Espace entre le texte et le bouton */
+}
+
+.btn-class-name:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn-class-name .front {
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Conteneur principal pour centrer la vidéo */
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1; /* Prendre tout l'espace disponible */
+    width: 100%;
+    margin-top: 100px; /* Assurer un espace avec le bouton en haut */
+}
+
+/* Styles pour la bulle de vidéo */
+.video-bubble {
+    width: 600px; /* Largeur de la bulle */
+    height: 550px; /* Hauteur de la bulle */
+    background-color: #fff;
+    border-radius: 50px; /* Bords arrondis de la bulle */
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2); /* Ombre autour de la bulle */
+    overflow: hidden; /* Cacher le débordement */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1; /* Position sous le bouton */
+}
+
+#miniVideo {
+    width: 100%; /* Adapter la vidéo à la bulle */
+    height: auto;
+}
+
+/* Cacher la vidéo par défaut */
+.hidden {
+    display: none;
+}

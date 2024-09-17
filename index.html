@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Plugin de Vidéo Moderne</title>
+    <script src="plugin.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Conteneur pour le texte et le bouton en haut -->
+    <div class="container">
+        <!-- Élément cliquable -->
+        <button class="btn-class-name" id="playVideoButton">
+            <span class="back"></span>
+            <span class="front">Noeuille!!</span>
+        </button>
+    </div>
+
+    <!-- Conteneur principal pour la vidéo centrée -->
+    <div class="main-container">
+        <!-- Vidéo à afficher dans une bulle -->
+        <div id="videoContainer" class="video-bubble hidden">
+            <video id="miniVideo" muted playsinline>
+                <source src="noah.mp4" type="video/mp4">
+                Votre navigateur ne supporte pas la vidéo.
+            </video>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
+
+
+
